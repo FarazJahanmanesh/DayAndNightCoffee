@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\DayAndNightCoffee.Core.Domain\DayAndNightCoffee.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>

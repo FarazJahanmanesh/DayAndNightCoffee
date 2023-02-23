@@ -19,4 +19,9 @@
     <ProjectReference Include="..\DayAndNight.Infra.Database\DayAndNightCoffee.Infra.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+
 </Project>
