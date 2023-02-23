@@ -3,6 +3,7 @@ using DayAndNightCoffee.Infra.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DayAndNightCoffee.Infra.Database.Migrations
 {
     [DbContext(typeof(DayAndNightCoffeeDbContext))]
-    partial class DayAndNightCoffeeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230223215846_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +37,7 @@ namespace DayAndNightCoffee.Infra.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CategoryProducts");
+                    b.ToTable("CategoryProduct");
                 });
 
             modelBuilder.Entity("DayAndNightCoffee.Core.Domain.Entities.Product", b =>
