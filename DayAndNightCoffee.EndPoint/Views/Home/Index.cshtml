@@ -1,5 +1,22 @@
-﻿@*
+﻿@using DayAndNightCoffee.Core.Domain.Dto.CategoryProductDetailDto.Services
+@model List<ShowAllCategoryProductDetailDto>
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+<head>
+    <link rel="stylesheet" href="~/css/ShowCategory.css" />
+</head>
+<ul>
+    @foreach(var item in Model){
+        <li class="card">
+            <a class="card-image" href="prozhe1.html" target="_blank" style="background-image: url(93.png);">
+                <!-- <img src="93.png" alt="Psychopomp" /> -->
+            </a>
+            <a class="card-description" href="prozhe1.html" target="_blank">
+                <h2>@item.Name</h2>
+            </a>
+        </li>
+    }
+</ul>
