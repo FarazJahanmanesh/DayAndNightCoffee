@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DayAndNight.Infra.Database\DayAndNightCoffee.Infra.Database.csproj" />
+    <ProjectReference Include="..\DayAndNightCoffee.Core.Application\DayAndNightCoffee.Core.Application.csproj" />
+    <ProjectReference Include="..\DayAndNightCoffee.Core.Domain\DayAndNightCoffee.Core.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
