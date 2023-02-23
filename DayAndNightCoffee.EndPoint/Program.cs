@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductServices, ProductServices>();
+builder.Services.AddScoped<ICategoryProductRepository, CategoryProductRepository>();
+builder.Services.AddScoped<ICategoryProductServices, CategoryProductServices>();
 
 builder.Services.AddDbContext<DayAndNightCoffeeDbContext>(options =>
     options.UseSqlServer("Server=.;Database=DayAndNightCoffee;Trusted_Connection=True;"));
