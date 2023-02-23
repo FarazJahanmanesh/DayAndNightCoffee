@@ -21,9 +21,4 @@
     <ProjectReference Include="..\DayAndNightCoffee.Core.Domain\DayAndNightCoffee.Core.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Views\Shared\" />
-  </ItemGroup>
-
 </Project>
