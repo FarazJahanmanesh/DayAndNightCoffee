@@ -6,15 +6,19 @@
 @{
 }
 <head>
+    <link rel="stylesheet" href="~/Imgs" />
     <link rel="stylesheet" href="~/css/ShowCategory.css" />
 </head>
 <ul>
     @foreach(var item in Model){
         <li class="card">
-            <a class="card-image" href="prozhe1.html" target="_blank" style="background-image: url(93.png);">
-                <!-- <img src="93.png" alt="Psychopomp" /> -->
+            <a>
+                <div>
+                    @*the jpg doesent load most edit*@
+                    <img style="width:350;height:500;" src="~/Imgs/@item.Name">
+                </div>
             </a>
-            <a class="card-description" href="prozhe1.html" target="_blank">
+            <a>
                 <h1 style="text-align:center">@item.Name</h1>
             </a>
         </li>
