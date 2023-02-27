@@ -7,24 +7,9 @@
 }
 <!DOCTYPE html>
 <html>
+
 <head>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-    </style>
+    <link rel="stylesheet" href="~/css/ShowProduct.css" />
 </head>
 <body>
     <table>
@@ -49,7 +34,7 @@
                 <th>
                         @if (item.PriceM == null)
                         {
-                        <h1 style="font-size:50px;text-align:center">-</h1>
+                        <h1 style="font-size:30px;text-align:center">-</h1>
                         }
                         else
                         {
