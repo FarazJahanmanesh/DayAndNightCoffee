@@ -37,8 +37,24 @@
         {
             <tr>
                 <th><h1>@item.Name</h1></th>
-                <th><h3>@item.PriceS</h3></th>
-                <th><h3>@item.PriceM</h3></th>
+                <th>
+                    @if (item.PriceS == null)
+                    {
+                        <h1 style="font-size:50px;text-align:center">-</h1>
+                    }
+                    else
+                    {
+                        <h3>@item.PriceS</h3>
+                    }
+                <th>
+                        @if (item.PriceM == null)
+                        {
+                        <h1 style="font-size:50px;text-align:center">-</h1>
+                        }
+                        else
+                        {
+                        <h3>@item.PriceM</h3>
+                        }
             </tr>
         }
     </table>
