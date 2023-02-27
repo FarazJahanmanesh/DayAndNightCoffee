@@ -15,10 +15,10 @@ namespace DayAndNightCoffee.Core.Application.Services
         {
             _productRepository=productRepository;
         }
-        public List<ShowsAllProductDetailDto> ShowsAllProduct()
+        public List<ShowsAllProductDetailDto> ShowsAllProduct(int id)
         {
             List<ShowsAllProductDetailDto> AllProduct = new List<ShowsAllProductDetailDto>();
-            var Product = _productRepository.ShowsAllProduct();
+            var Product = _productRepository.ShowsAllProduct(id);
             foreach (var item in Product)
             {
                 AllProduct.Add(new ShowsAllProductDetailDto { Name=item.Name,Price=item.Price});

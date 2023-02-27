@@ -9,6 +9,6 @@ namespace DayAndNightCoffee.Core.Domain.Contracts
 {
     public interface IProductServices
     {
-        public List<ShowsAllProductDetailDto> ShowsAllProduct();
+        public List<ShowsAllProductDetailDto> ShowsAllProduct(int id);
     }
 }

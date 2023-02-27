@@ -21,7 +21,7 @@ namespace DayAndNightCoffee.Infra.Database.Repository
             var CategoryProduct=_dayAndNightCoffeeDbContext.CategoryProducts.ToList();
             foreach(var item in CategoryProduct)
             {
-                AllCategoryProduct.Add(new ShowAllCategoryProductDetailDto { Name = item.Name ,PhotoName=item.PhotoName});
+                AllCategoryProduct.Add(new ShowAllCategoryProductDetailDto {  Id=item.Id,Name = item.Name ,PhotoName=item.PhotoName});
             }
             return AllCategoryProduct;
         }

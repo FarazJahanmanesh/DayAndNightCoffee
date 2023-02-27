@@ -15,10 +15,10 @@ namespace DayAndNightCoffee.Infra.Database.Repository
         {
             _DayAndNightCoffeeDbContext=dayAndNightCoffeeDbContext;
         }
-        public List<ShowsAllProductDetailDto> ShowsAllProduct()
+        public List<ShowsAllProductDetailDto> ShowsAllProduct(int id)
         {
             List<ShowsAllProductDetailDto> AllProduct = new List<ShowsAllProductDetailDto> ();
-            var product=_DayAndNightCoffeeDbContext.Products.ToList();
+            var product=_DayAndNightCoffeeDbContext.Products.Where(c=>c.Category.Id==id).ToList();
             foreach (var item in product)
             {
                 AllProduct.Add(new ShowsAllProductDetailDto {Name=item.Name , Price=item.Price});

@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="~/css/ShowCategory.css" />
 </head>
 <ul>
-
     @foreach(var item in Model){
         <li class="card">
-            <a>
-                <div>
+            <a asp-action="ShowsAllProduct" asp-controller="Product" asp-route-id="@item.Id">
                     @*the jpg doesent load most edit*@
                     <img style="width:350;height:500;" src="~/Imgs/@item.PhotoName">
-                </div>
             </a>
-            <a>
+            <a asp-action="ShowsAllProduct" asp-controller="Product" asp-route-id="@item.Id">
                 <h1 style="text-align:center">@item.Name</h1>
             </a>
         </li>
