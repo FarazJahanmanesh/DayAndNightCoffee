@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="~/css/ShowCategory.css" />
 </head>
 <ul>
+
     @foreach(var item in Model){
         <li class="card">
             <a>
                 <div>
                     @*the jpg doesent load most edit*@
-                    <img style="width:350;height:500;" src="~/Imgs/@item.Name">
+                    <img style="width:350;height:500;" src="~/Imgs/@item.PhotoName">
                 </div>
             </a>
             <a>
