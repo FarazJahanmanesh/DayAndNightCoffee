@@ -21,7 +21,7 @@ namespace DayAndNightCoffee.Core.Application.Services
             var Product = _productRepository.ShowsAllProduct(id);
             foreach (var item in Product)
             {
-                AllProduct.Add(new ShowsAllProductDetailDto { Name=item.Name,Price=item.Price});
+                AllProduct.Add(new ShowsAllProductDetailDto { Name=item.Name, PriceS = item.PriceS, PriceM = item.PriceM });
             }
             return AllProduct;
         }

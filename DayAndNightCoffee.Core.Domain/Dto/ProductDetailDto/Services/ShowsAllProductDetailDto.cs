@@ -9,6 +9,7 @@ namespace DayAndNightCoffee.Core.Domain.Dto.ProductDetailDto.Services
     public class ShowsAllProductDetailDto
     {
         public string Name { get; set; }
-        public int Price { get; set; }
+        public int? PriceS { get; set; }
+        public int? PriceM { get; set; }
     }
 }

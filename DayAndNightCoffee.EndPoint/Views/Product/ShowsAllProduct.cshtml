@@ -29,16 +29,18 @@
 <body>
     <table>
         <tr style="background-color:#04AA6D">
-                <th><h1 style="font-size:40px">نام محصول</h1></th>
-                <th><h1 style="font-size:40px">قیمت محصول</h1></th>
+            <th><h1 style="font-size:40px;text-align:center">نام محصول</h1></th>
+            <th><h1 style="font-size:40px;text-align:center">قیمت محصول سایز کوچیک</h1></th>
+            <th><h1 style="font-size:40px;text-align:center">قیمت محصول سایز بزرگ</h1></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th><h1>@item.Name</h1></th>
+                <th><h3>@item.PriceS</h3></th>
+                <th><h3>@item.PriceM</h3></th>
             </tr>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <th><h2>@item.Name</h2></th>
-                    <th><h4>@item.Price</h4></th>
-                </tr>
-            }
+        }
     </table>
 </body>
 </html>
