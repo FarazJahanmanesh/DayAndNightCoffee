@@ -16,5 +16,7 @@ namespace DayAndNightCoffee.Infra.Database
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<CategoryProduct> CategoryProducts { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<CategoryProduct> Carts { get; set; }
     }
 }
