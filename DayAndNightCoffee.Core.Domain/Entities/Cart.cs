@@ -10,6 +10,6 @@ namespace DayAndNightCoffee.Core.Domain.Entities
     {
         public int Id { get; set; }
         public int Total { get; set; }
-        public List<Product> Products { get; set; }
+        public List<Product>? Products { get; set; }
     }
 }
