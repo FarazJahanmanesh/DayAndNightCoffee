@@ -10,7 +10,7 @@ namespace DayAndNightCoffee.Core.Domain.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string phone { get; set; }
+        public int phone { get; set; }
         public string Password { get; set; }
         public Cart cart { get; set; }
         public DateTime Created { get; set; }= DateTime.Now;
