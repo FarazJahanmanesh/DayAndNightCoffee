@@ -1,24 +1,77 @@
 ﻿@using DayAndNightCoffee.Core.Domain.Dto.CategoryProductDetailDto.Services
 @model List<ShowAllCategoryProductDetailDto>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
 }
 <head>
-    <link rel="stylesheet" href="~/Imgs" />
-    <link rel="stylesheet" href="~/css/ShowCategory.css" />
 </head>
+
+<style>
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .card {
+        width: 300px;
+        max-width: 90vw;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin: 10px;
+        transition: transform 0.3s;
+    }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card h1 {
+            font-size: 18px;
+            padding: 15px;
+            text-align: center;
+            margin: 0;
+            color: #333;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+</style>
+
 <ul>
-    @foreach(var item in Model){
+    @foreach (var item in Model)
+    {
         <li class="card">
             <a asp-action="ShowsAllProduct" asp-controller="Product" asp-route-id="@item.Id">
-                    @*the jpg doesent load most edit*@
-                    <img style="width:350;height:500;" src="~/Imgs/@item.PhotoName">
+                <img src="~/Imgs/@item.PhotoName" alt="@item.Name">
             </a>
             <a asp-action="ShowsAllProduct" asp-controller="Product" asp-route-id="@item.Id">
-                <h1 style="text-align:center">@item.Name</h1>
+                <h1>@item.Name</h1>
             </a>
         </li>
     }
 </ul>
+
+@if (!Model.Any())
+{
+    <div style="text-align: center; padding: 50px;">
+        <h2 style="color: #666; font-size: 24px;">محصولی یافت نشد</h2>
+    </div>
+}

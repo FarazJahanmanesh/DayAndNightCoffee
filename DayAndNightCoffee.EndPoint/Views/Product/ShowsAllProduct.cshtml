@@ -1,7 +1,6 @@
 ﻿@using DayAndNightCoffee.Core.Domain.Dto.ProductDetailDto.Services
 @model List<ShowsAllProductDetailDto>
 @*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
@@ -32,14 +31,14 @@
                         <h3>@item.PriceS</h3>
                     }
                 <th>
-                        @if (item.PriceM == null)
-                        {
+                    @if (item.PriceM == null)
+                    {
                         <h1 style="font-size:30px;text-align:center">-</h1>
-                        }
-                        else
-                        {
+                    }
+                    else
+                    {
                         <h3>@item.PriceM</h3>
-                        }
+                    }
             </tr>
         }
     </table>

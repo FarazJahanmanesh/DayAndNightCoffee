@@ -1,16 +1,63 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
-<div style="border:5px;border-radius: 50px;background-color:rgb(217, 217, 217);">
-    <h1 style="text-align:center ;font-size: 80px;">Day & Night</h1>
+<style>
+    .page-header {
+        background-color: rgb(217, 217, 217);
+        width: 100%;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 80px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+    }
+
+    .page-footer {
+        background-color: rgb(191, 191, 191);
+        width: 100%;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .footer-text {
+        text-align: center;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+    }
+</style>
+
+<div class="page-header">
+    <h1 class="page-title">Day & Night</h1>
 </div>
-<div>
+
+<div class="content">
     @RenderBody()
 </div>
-<div>
-    <h1 style="background-color:rgb(191, 191, 191);margin-bottom:0px;text-align:center;font-size: 25px;">
-        برای قهوه بیا برای دوستی بمان 
+
+<div class="page-footer">
+    <h1 class="footer-text">
+        برای قهوه بیا برای دوستی بمان
     </h1>
 </div>
